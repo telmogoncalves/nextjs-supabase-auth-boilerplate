@@ -1,7 +1,17 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import '../styles/globals.css'
+
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <>
+      <Head>
+        <title>NextJS and Supabase Auth Boilerplate</title>
+      </Head>
+
+      <Component {...pageProps} />
+    </>
+  )
 }
 export default MyApp
